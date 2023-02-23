@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container">
+	<div class="row d-flex justify-content-center my-3">
+		<div class="col-10 col-md-8">
+			{% if posts %}
+				{% for post in posts %}
+					<div class="card mb-2">
+						<div class="card-header">
+							<h4 class="mb-0">{{ post.title }}</h4>
+						</div>
+						<div class="card-body">
+							<p class="fs-5 mb-0">{{ post.author }}</p>
+							<span class="fw-lighter fst-italic mb-1">{{ post.created }}</span>
+							<p>{{ post.content }}</p>
+						</div>
+					</div>
+				{% endfor %}
+			{% else %}
+				<p>No post published yet.</p>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}
