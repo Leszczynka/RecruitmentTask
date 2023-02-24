@@ -7,15 +7,15 @@
 				{% for post in posts %}
 					<div class="card mb-3">
 						<div class="card-header">
-							<h4 class="mb-0">{{ post.title }}</h4>
+							<h5 class="mb-0">{{ post.title }}</h5>
 						</div>
 						<div class="card-body">
-							<p class="fs-5 mb-0">{{ post.author }}</p>
-							<small class="fw-lighter fst-italic mb-1">{{ post.created }}</small>
-							<p>{{ post.content }}</p>
+							<small> by {{ post.author }},</small>
+							<small class="fst-italic">{{ post.created }}</small>
+							<p class="mt-3">{{ post.content }}</p>
 						</div>
 						{% if post.author == user %}
-							<div class="card-footer">
+							<div class="card-footer text-center">
 								<a class="btn btn-outline-dark btn-sm" href="{% url 'post-update' post.id %}">Update</a>
 							</div>
 						{% endif %}
