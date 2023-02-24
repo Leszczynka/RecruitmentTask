@@ -9,7 +9,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your account has been created, you are now able to log in.')
-            return redirect('blog-posts')
+            return redirect('login')
 
     else:
         form = UserRegisterForm()
