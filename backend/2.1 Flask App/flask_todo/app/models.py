@@ -18,6 +18,7 @@ class ToDoList(db.Model):
 
     def to_json(self):
         json_todo = {
+            'id': self.id,
             'task': self.task
         }
         return json_todo
