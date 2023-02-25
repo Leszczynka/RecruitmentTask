@@ -13,7 +13,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
     db.init_app(app)
-    Bootstrap(app)
+
     from .api import api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api')
 

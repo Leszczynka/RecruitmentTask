@@ -27,3 +27,10 @@ def update_task(id):
         return redirect('/')
     form.task.data = task_to_update.task
     return render_template('task_form.html', form=form)
+
+
+@main.route('/tasks/<int:id>/delete', methods=['GET', 'POST'])
+def delete_task(id):
+    task_to_delete = ToDoList.query.get_or_404(id)
+    task_to_delete.delete()
+    return redirect('/')

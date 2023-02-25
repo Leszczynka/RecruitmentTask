@@ -2,7 +2,7 @@ from . import db
 
 
 class ToDoList(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id = db.Column(db.Integer, primary_key=True)
     task = db.Column(db.String(250), nullable=False)
 
     def __init__(self, task):
@@ -18,6 +18,7 @@ class ToDoList(db.Model):
 
     def to_json(self):
         json_todo = {
+            'id': self.id,
             'task': self.task
         }
         return json_todo
