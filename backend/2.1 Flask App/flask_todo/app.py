@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, make_response, abort, request
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
@@ -18,6 +18,31 @@ class ToDoList(db.Model):
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+@app.route("/tasks", methods=["GET"])
+def get_tasks():
+    pass
+
+
+@app.route("/tasks/<int:id>", methods=["GET"])
+def get_task(id):
+    pass
+
+
+@app.route("/tasks", methods=["POST"])
+def add_task():
+    pass
+
+
+@app.route("/tasks/<int:id>", methods=["PUT"])
+def update_task(id):
+    pass
+
+
+@app.route("/tasks/<int:id>", methods=["DELETE"])
+def delete_task(id):
+    pass
 
 
 if __name__ == '__main__':
