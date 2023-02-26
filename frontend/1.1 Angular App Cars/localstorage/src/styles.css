@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+h1 {
+  color: black;
+  font-family: 'Courier New';
+  font-size: 300%;
+}
