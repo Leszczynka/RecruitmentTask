@@ -1,5 +1,12 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
 h1 {
   color: black;
   font-family: 'Courier New';
   font-size: 300%;
+}
+
+body {
+  margin-left: 20px;
+  margin-top: 20px;
 }

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './cars.component.html',
   styleUrls: ['./cars.component.css']
 })
-export class CarsComponent {
+
+export class CarsComponent  {
 
 }
