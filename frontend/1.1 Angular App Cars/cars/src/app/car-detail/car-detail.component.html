@@ -1,19 +1,21 @@
-<div *ngIf="car">
-    <h2>{{ car.name | uppercase }} Details</h2>
-    <div class="col-md-10">
-        <table class="table table-bordered table-striped w-auto">
-            <thead>
-                <tr>
-                    <th>Part</th>
-                    <th>Price</th>                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let part of car.parts">
-                    <td class="col-md-5">{{ part.name }}</td>
-                    <td class="col-md-5">{{ part.price }}</td>    
-                </tr>
-            </tbody>
-        </table>
+<div class="container">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-10" *ngIf="car">
+        <h2><span class="orange">{{ car.name | uppercase }}</span> Details</h2>
+            <table class="table table-bordered align-middle table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Price</th>                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let part of car.parts">
+                        <td>{{ part.name }}</td>
+                        <td>{{ part.price }}</td>    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

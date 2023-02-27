@@ -1,12 +1,18 @@
-<h2>CARS</h2>
-<ul>
-    <li *ngFor="let car of cars">
-        <button [class.selected]="car === selectedCar" type="button" (click)="onSelect(car)">
-            <span>{{ car.name }}</span>
-         </button>
-    </li>
-</ul>
-
+<div class="container">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-10 mb-3" *ngIf="cars">
+        <h2 class="my-3">CARS LIST</h2>
+        <ul class="cars">
+            <li *ngFor="let car of cars">
+                <button [class.selected]="car === selectedCar" type="button" (click)="onSelect(car)">
+                    <span class="badge">{{ car.id }}</span>
+                    <span class="name">{{ car.name }}</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
 <app-car-detail [car]="selectedCar"></app-car-detail>
+
 
 
