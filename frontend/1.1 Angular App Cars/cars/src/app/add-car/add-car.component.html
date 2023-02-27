@@ -1,24 +1,20 @@
-<div class="row">
-    <div class="col-md-10">
+<div class="row justify-content-center">
+    <h5>Add new</h5>
+    <div class="col-md-8">
       <form [formGroup]="addCarForm" (ngSubmit)="onSubmit()">
         <div class="row justify-content-center">
-          <div class="col-md-10">
+          <div class="col-md-8">
             <div class="form-group">
-              <label for="name">Name </label>
               <input formControlName="name" type="text" class="form-control" id="name" placeholder="carName">
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary mt-2">Save</button>
             </div>
           </div>
         </div>
         <br>
         <div formArrayName="parts">
             <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <h3>Parts</h3>
+                <div class="col-md-8">
                     <div>
-                        <button type="button" class="btn btn-success mt-2" (click)="onAddPart()">Add Part</button>
+                        <button type="button" class="btn btn-secondary mt-2" (click)="onAddPart()">Add Part</button>
                     </div>
                     <table class="table table-bordered align-middle table-striped mt-3">
                         <thead>
@@ -29,11 +25,14 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let part of addCarForm.get('parts').controls;let i = index" [formGroupName]="i">
-                                <td class="col-md-8"><input class="form-control" type="text" formControlName="name" placeholder="partName"></td>
+                                <td class="col-md-4"><input class="form-control" type="text" formControlName="name" placeholder="partName"></td>
                                 <td class="col-md-2"><input class="form-control" type="price" formControlName="price" placeholder="price"></td>    
                             </tr>
                         </tbody>
                     </table>
+                    <div>
+                        <button type="submit" class="btn btn-lg btn-primary mt-2">Save</button>
+                    </div>
                 </div>
             </div>
         </div>

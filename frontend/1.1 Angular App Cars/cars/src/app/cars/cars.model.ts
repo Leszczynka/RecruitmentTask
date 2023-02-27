@@ -3,8 +3,8 @@ export class Car {
     parts: Part[];
  
     constructor(name: string, parts: Part[]) {
-     this.name = name
-     this.parts = parts
+        this.name = name
+        this.parts = parts
     }
  }
  
@@ -13,7 +13,7 @@ export class Car {
      price: number;
  
      constructor(name: string, price: number) {
-         this.name = name
-         this.price = price
+        this.name = name
+        this.price = price
      }
  }

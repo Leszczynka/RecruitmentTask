@@ -18,7 +18,7 @@ export class CarsComponent implements OnInit {
 
   selectedCar?: Car;
   
-  onSelect(car: Car): void {
+  onSelect(car: Car) {
     this.selectedCar = car;
   }
 

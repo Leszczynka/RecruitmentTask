@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Car } from '../cars/cars.model';
 import { FormControl, FormGroup, Validators, FormArray} from '@angular/forms';
 import { CarService } from '../car.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { Router, Params, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-car',
@@ -14,7 +13,7 @@ import { NgForm } from '@angular/forms';
 export class AddCarComponent implements OnInit {
   id: number;
   addCarForm;
-  newForm: boolean = false;
+  newForm: boolean = false
 
   constructor(public route: ActivatedRoute, public carService: CarService, public router: Router) {}
 
@@ -48,9 +47,8 @@ export class AddCarComponent implements OnInit {
 
   onSubmit() {
     const newCar = new Car(this.addCarForm.value['name'], this.addCarForm.value['parts'])
-  
     this.carService.addCar(newCar);
-    this.router.navigate(['/'])
+    this.router.navigate(['/cars'])
     }
 
 }

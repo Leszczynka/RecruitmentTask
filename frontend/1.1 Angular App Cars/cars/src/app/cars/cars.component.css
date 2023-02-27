@@ -1,17 +1,13 @@
-/* body, h2 {
-    text-align: center;
-    align-items: center;
-} */
-
 .cars {
     list-style-type: none;
-    width: 15em;
+    width: 20em;
 }
   
 .cars li {
     display: flex;
 }
-  
+
+
 .cars button {
     flex: 1;
     position: relative;

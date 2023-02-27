@@ -5,7 +5,6 @@ import { Part } from './cars/cars.model';
   providedIn: 'root'
 })
 export class CarService {
-
   cars: Car[] = [
     new Car(
       'Mercedes',
@@ -20,7 +19,7 @@ export class CarService {
   setCars(cars: Car[]) {
     this.cars = cars;
   }
-  
+
   getCars() {
     return this.cars.slice();
   }  

@@ -14,7 +14,7 @@ import { AddCarComponent } from './add-car/add-car.component';
     AppComponent,
     CarsComponent,
     CarDetailComponent,
-    AddCarComponent
+    AddCarComponent,
   ],
   imports: [
     BrowserModule,
