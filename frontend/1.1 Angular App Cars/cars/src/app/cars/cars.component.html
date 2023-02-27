@@ -3,9 +3,9 @@
         <div class="col-md-10 mb-3" *ngIf="cars">
         <h2 class="my-3">CARS LIST</h2>
         <ul class="cars">
-            <li *ngFor="let car of cars">
+            <li *ngFor="let car of carService.cars; let i = index">
                 <button [class.selected]="car === selectedCar" type="button" (click)="onSelect(car)">
-                    <span class="badge">{{ car.id }}</span>
+                    <span class="badge">{{ i }}</span>
                     <span class="name">{{ car.name }}</span>
                 </button>
             </li>

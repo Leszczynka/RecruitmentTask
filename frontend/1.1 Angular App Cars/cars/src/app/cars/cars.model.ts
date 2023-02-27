@@ -1,10 +1,8 @@
 export class Car {
-    id: number;
     name: string;
     parts: Part[];
  
-    constructor(id: number, name: string, parts: Part[]) {
-     this.id = id
+    constructor(name: string, parts: Part[]) {
      this.name = name
      this.parts = parts
     }

@@ -1,24 +1,36 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { Car } from './cars/cars.model';
-import { CARS } from './mock-cars';
-
+import { Part } from './cars/cars.model';
 @Injectable({
   providedIn: 'root'
 })
 export class CarService {
 
-  cars: Car[] = CARS;
+  cars: Car[] = [
+    new Car(
+      'Mercedes',
+      [new Part('Engine', 10000), new Part('Wheel', 2000)]
+    ),
+    new Car(
+      'Toyota',
+      [new Part('Engine', 5000), new Part('Wheel', 1000)]
+    )
+  ];
 
-  getCar(index: number) {
-    return this.cars[index];
+  setCars(cars: Car[]) {
+    this.cars = cars;
   }
-
+  
   getCars() {
     return this.cars.slice();
+  }  
+
+  getCar(id: number) {
+    return this.cars[id];
   }
 
-  getCarParts(index:number) {
-    return this.cars[index]['parts']
+  addCar(car: Car) {
+    this.cars.push(car);
   }
+
 }
