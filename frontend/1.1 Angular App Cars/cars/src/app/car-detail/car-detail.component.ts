@@ -13,7 +13,7 @@ export class CarDetailComponent implements OnInit {
   car: Car;
   id: number;
 
-  constructor(private route: ActivatedRoute,public partService: PartService, public carService: CarService) {}
+  constructor(public route: ActivatedRoute,public partService: PartService, public carService: CarService) {}
   ngOnInit() {
     const id = this.route.params.subscribe((params: Params) => {
     this.id = +params['id'];
@@ -24,11 +24,5 @@ export class CarDetailComponent implements OnInit {
       (car: Car[]) => {
         this.car = car[this.id]
       })
-  }
-
-  addParts() {
-    this.car.parts.forEach(part => {
-      this.partService.addParts(part)
-    })
   }
 }

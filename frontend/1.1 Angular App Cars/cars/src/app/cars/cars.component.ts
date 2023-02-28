@@ -13,11 +13,11 @@ export class CarsComponent implements OnInit {
   constructor(public carService: CarService) {}
    
   ngOnInit() {
-    // this.carService.carsChanged.subscribe(
-    //   (cars: Car[]) => {
-    //     this.cars = cars
-    //   }
-    // )
+    this.carService.carsChanged.subscribe(
+      (cars: Car[]) => {
+        this.cars = cars
+      }
+    )
     this.cars = this.carService.getCars();
   }
 

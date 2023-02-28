@@ -22,6 +22,8 @@ export class CarService {
   setCars(cars: Car[]) {
     this.cars = cars;
     this.carsChanged.next(this.cars.slice())
+    localStorage.setItem('car', JSON.stringify(this.cars))
+
   }
 
   getCars() {
@@ -35,13 +37,17 @@ export class CarService {
   }  
 
   getCar(id: number) {
-    // localStorage.getItem('car')['id'] === id
     return this.cars[id];
-
   }
 
   addCar(car: Car) {
     this.cars.push(car);
+    this.carsChanged.next(this.cars.slice());
+    localStorage.setItem('car', JSON.stringify(this.cars))
+  }
+
+  updateCar(id:number, newCar: Car) {
+    this.cars[id] = newCar;
     this.carsChanged.next(this.cars.slice());
     localStorage.setItem('car', JSON.stringify(this.cars))
   }

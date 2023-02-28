@@ -1,6 +1,5 @@
 <div class="row justify-content-center">
-    <h5>Add new</h5>
-    <div class="col-md-8">
+    <div class="col-md-8 mt-3">
       <form [formGroup]="addCarForm" (ngSubmit)="onSubmit()">
         <div class="row justify-content-center">
           <div class="col-md-8">
@@ -13,9 +12,6 @@
         <div formArrayName="parts">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div>
-                        <button type="button" class="btn btn-secondary mt-2" (click)="onAddPart()">Add Part</button>
-                    </div>
                     <table class="table table-bordered align-middle table-striped mt-3">
                         <thead>
                             <tr>
@@ -30,6 +26,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div>
+                        <button type="button" class="btn btn-secondary mt-2" (click)="onAddPart()">Add Part</button>
+                    </div>
                     <div>
                         <button type="submit" class="btn btn-lg btn-primary mt-2">Save</button>
                     </div>
