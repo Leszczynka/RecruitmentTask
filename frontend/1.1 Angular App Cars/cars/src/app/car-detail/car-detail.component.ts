@@ -10,17 +10,21 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 
 export class CarDetailComponent implements OnInit {
-  // car: Car;
-  @Input() car?: Car;
+  car: Car;
   id: number;
 
   constructor(private route: ActivatedRoute,public partService: PartService, public carService: CarService) {}
   ngOnInit() {
-    this.route.params.subscribe((params: Params) => {
-      this.id = +params['id'];
-      this.car = this.carService.getCar(this.id);
-    }
-  )}
+    const id = this.route.params.subscribe((params: Params) => {
+    this.id = +params['id'];
+    this.car = this.carService.getCar(this.id);
+    })
+
+    this.carService.carsChanged.subscribe(
+      (car: Car[]) => {
+        this.car = car[this.id]
+      })
+  }
 
   addParts() {
     this.car.parts.forEach(part => {
