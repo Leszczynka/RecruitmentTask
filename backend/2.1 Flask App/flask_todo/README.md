@@ -38,6 +38,7 @@ source venv/bin/activate
 4. Create .env file with your database credentials in the form of URI string and also provide SECRET_KEY to keep the sessions secure. For example:
 
 DATABASE_URI=postgresql://user:password@host:port/database_name
+
 SECRET_KEY=os.urandom(24)
 
 5. From your command line pointing to the project root directory (flask_todo/):
