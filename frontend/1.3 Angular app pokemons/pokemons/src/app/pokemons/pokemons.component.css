@@ -3,14 +3,8 @@
     max-width: 90%;
 }
 
-h1 {
-    font-family: 'Rampart One';
-    font-size: 50px;
-}
-
-h5 {
+small {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
 }
 
 ul {
@@ -45,11 +39,12 @@ ul {
 .pokemons .badge {
     display: inline-block;
     font-size: 18px;
+    width: 50px;
     background-color: #D2221F;
-    margin-right: .8em;
     border-radius: 5px 0 0 5px;
 }
 
 .pokemons .name {
+    margin:auto;
     align-self: center;
 }

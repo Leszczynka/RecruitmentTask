@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="row justify-content-center text-center">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-6 col-md-8">
             <ul *ngIf="hidden" class="pokemons">
                 <li *ngFor="let pokemon of pokemons let i = index">
                     <button class="text-center" [routerLink]="['/pokemon', pokemon.name]">
@@ -14,7 +14,7 @@
                     </button>
                 </li>
             </ul>
-            <h5 *ngIf="!hidden">Click on Poké Ball to see available Pokémons</h5>
+            <small class="text-muted" *ngIf="!hidden">Click on Poké Ball to see available Pokémons</small>
         </div>
     </div>
 </div>
