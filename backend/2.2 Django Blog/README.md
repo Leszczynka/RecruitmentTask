@@ -28,7 +28,7 @@ source venv/bin/activate
 3. From your command line pointing to the project root directory:
 ```bash
 # Install requirements:
-pip install requirements
+pip install -r requirements.txt
 
 # Migrate tables:
 python manage.py migrate
