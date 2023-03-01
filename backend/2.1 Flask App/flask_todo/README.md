@@ -39,7 +39,7 @@ source venv/bin/activate
 
 DATABASE_URI=postgresql://user:password@host:port/database_name
 
-SECRET_KEY=os.urandom(24)
+SECRET_KEY=os.random(24)
 
 5. From your command line pointing to the project root directory (flask_todo/):
 
