@@ -36,9 +36,10 @@ source venv/bin/activate
 ```
 3. Make sure you have Postgres installed or if you're using Docker, make sure your docker container with Postgres is running.
 4. Create .env file with your database credentials in the form of URI string and also provide SECRET_KEY to keep the sessions secure. For example:
-DATABASE_URI=postgresql://user:password@host:port/database_name
 
-    SECRET_KEY=os.urandom(24)
+DATABASE_URI=postgresql://user:password@host:port/database_name
+SECRET_KEY=os.urandom(24)
+
 5. From your command line pointing to the project root directory (flask_todo/):
 
 
@@ -52,7 +53,7 @@ $ flask shell
 >> exit()
 
 # Run server:
-python flask run
+flask run
 ```
 You are now able to access `localhost:5000` in your browser.
 
