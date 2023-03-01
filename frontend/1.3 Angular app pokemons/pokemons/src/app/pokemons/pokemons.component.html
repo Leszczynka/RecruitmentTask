@@ -1,21 +1,20 @@
-<div class="container mt-5">
+<div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-lg-4 col-md-6 text-center">
-            <h1>POKEMONS</h1>
             <img src="/assets/pokeball.png" class="logo mx-auto d-block" (click)="displayList()">
         </div>
     </div>
     <div class="row justify-content-center text-center">
         <div class="col-lg-4 col-md-6">
             <ul *ngIf="hidden" class="pokemons">
-                <li *ngFor="let pokemon of pokemons.results let i = index">
-                    <button class="text-center">
-                        <span class="badge">{{ i }}</span>
+                <li *ngFor="let pokemon of pokemons let i = index">
+                    <button class="text-center" [routerLink]="['/pokemon', pokemon.name]">
+                        <span class="badge">{{ i + 1 }}</span>
                         <span class="name">{{ pokemon.name }}</span>
                     </button>
                 </li>
             </ul>
-            <h5 *ngIf="!hidden">Click on Poké Ball and see available Pokémons</h5>
+            <h5 *ngIf="!hidden">Click on Poké Ball to see available Pokémons</h5>
         </div>
     </div>
 </div>

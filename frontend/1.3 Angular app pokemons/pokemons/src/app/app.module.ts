@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,
