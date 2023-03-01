@@ -1,4 +1,7 @@
 # Pokemons
+Simple Angular app consuming the pokeapi: https://pokeapi.co/
+
+App displays list of 100 pokemons and also their details.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
